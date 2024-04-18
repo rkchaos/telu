@@ -1,0 +1,12 @@
+1.new ngo ko add krne pe address add nhi ho rha hai
+2.ye is verify wala nhi kia hai simple agar ngo ne documents nhi dia delete kr dunga usse data base se ye kra hai uski jagha pe
+
+
+ 
+4. admin me jab view kr rahe hai  ek aprticular ngo ko tabh address me object object aa rha hai isse resolve krna hai and jab me human readable kr rha hu too jo tune data dia tabh uska address aa raha hai but mene jo new data dala hai  ngo ka uska nhi show kr rha hai 
+
+5.ek or dikaat jab hum admin ka logout kr rahe hai ya kisi ka bhi too session expire ho jaa rha hai means user logout ho ja rha hai i think admin ka ek alag banana hoga ya fir rehne de mere se resolve nhi ho rha hai ye 
+
+6.and mene  NGO_password ko required se hta dia hai Schema me because passpord too admin add nhi kr skta isi liye nhi too jab me store kr rha hu NGO me too woo password bhi mangh rha hai
+
+

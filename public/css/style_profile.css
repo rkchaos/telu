@@ -1,0 +1,84 @@
+.profile-banner {
+    margin: 0;
+    height: 200px;
+    background-image: url("../images/img-header-profile.avif");
+    position: relative;
+    top: -20px;
+}
+
+.profile-pic {
+    width: 210px; 
+    height: 210px;
+    border: 8px solid var(--gray);
+    border-radius: 8px;
+    background-position: bottom;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+.content {
+    padding: 0px 100px 100px 100px;
+}
+
+.first-half {
+    padding-bottom: 0px; 
+    height: 100px;
+}
+
+.sec {
+    margin-left: 225px;
+}
+
+.username {
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.edit {
+    height: 34px;
+    outline: none;
+    font-weight: bolder;
+    border-radius: 9999px;
+    border: 1px solid var(--blue);
+    padding: 0px 15px;
+    background-color: var(--white);
+}
+
+.edit:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 990px) {
+    .content {
+        padding: 5px 20px 50px 20px;
+    }
+    .profile-pic {
+        left: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+        top: 260px;
+        left: 20px;
+    }
+    .sec {
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+    .first-half {
+        height: 125px;
+    }
+}

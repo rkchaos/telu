@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Seach</title>
+</head>
+<body>
+    <%-include('./partials/adminHeader')%>
+    <%-include('./partials/adminNav')%>
+    <div class="contain">
+
+        <%-include('./partials/adminSlidbar')%>
+        <section class="main">
+            <div class="main-top">
+                <h1 class="head">Search</h1>
+               
+            </div>
+            <a href="/addNgo" class="float-end btn btn-sm btn-outline-secondary" >+New Ngo</a>
+            <hr>
+            <div class="table-responsive">
+                <% if (searchNgo !='') { %>
+                
+                  <table class="table table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">NGO Name</th>
+                        <th scope="col">Registration No</th>
+                      <th scope="col">Email</th>
+                       <th scope="col">Sector</th>
+                     <th scope="col" class="text-end">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <%searchNgo .forEach(element => { %>
+                        <tr class="align-middle">
+                            <td><%= element.name %></td>
+                           <td><%= element.NGO_registration_number %></td>
+                          <td><%= element.email %></td>
+                           <td><%= element.NGO_sectors %></td>
+                          <td>
+              
+                            <div class="d-flex flex-row justify-content-end gap-2">
+              
+                              <a href="/adminview/<%= element._id %>" type="button" class="btn btn-primary btn-small">
+                                <i class="fa-regular fa-eye"></i>
+                              </a>
+                
+                              <a href="/adminedit/<%= element._id %>" type="button" class="btn btn-warning btn-small">
+                                <i class="fa-solid fa-pencil"></i>
+                              </a>
+                
+                            </div>
+              
+                          </td>
+                        </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+              
+                <% } else { %>
+                  <h2>No results found.</h2>
+                <% } %>
+              
+              </div>
+            </section>
+            </div>
+
+
+
+
+
+
+
+    <%-include('./partials/adminFooter')%>
+</body>
+</html>
